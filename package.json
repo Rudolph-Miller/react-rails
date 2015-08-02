@@ -23,8 +23,10 @@
     "browserify": "^11.0.1",
     "browserify-incremental": "^3.0.1",
     "coffeeify": "^1.1.0",
+    "immutable": "^3.7.4",
     "marked": "^0.3.5",
     "react": "^0.13.3",
-    "reactify": "^1.1.1"
+    "reactify": "^1.1.1",
+    "whatwg-fetch": "^0.9.0"
   }
 }
