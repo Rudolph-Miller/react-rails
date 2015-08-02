@@ -1,5 +1,6 @@
-/* global React */
 "use strict"
+
+var React = require('react');
 
 var CommentBox = React.createClass({
   render: function() {
@@ -56,3 +57,9 @@ var CommentForm = React.createClass({
     );
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  React.render(<CommentBox />, document.body);
+});
+
