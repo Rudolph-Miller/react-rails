@@ -1,0 +1,14 @@
+machine:
+  ruby:
+    version: 2.2.2
+
+dependencies:
+  override:
+    - bundle --path=vendor/bundle
+  cache_directories:
+    - vendor/bundle
+
+test:
+  override:
+    - bundle exec rubocop
+    - bundle exec rake spec

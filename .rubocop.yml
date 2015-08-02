@@ -1,0 +1,20 @@
+AllCops:
+  RunRailsCops: true 
+
+Encoding:
+  EnforcedStyle: when_needed
+
+AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+LineLength:
+  Max: 130
+
+Documentation:
+  Enabled: false
+
+AssignmentInCondition:
+  Enabled: false
+
+HandleExceptions:
+  Enabled: false
