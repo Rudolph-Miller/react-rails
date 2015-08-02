@@ -46,3 +46,4 @@ group :development, :test do
 end
 
 gem 'react-rails'
+gem 'browserify-rails'
