@@ -5,8 +5,10 @@ machine:
 dependencies:
   override:
     - bundle --path=vendor/bundle
+    - npm install
   cache_directories:
     - vendor/bundle
+    - node_modules
 
 test:
   override:
