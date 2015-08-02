@@ -1,6 +1,4 @@
-"use strict"
-
-var React = require('react');
+"use strict";
 
 var CommentBox = React.createClass({
   render: function() {
@@ -14,6 +12,18 @@ var CommentBox = React.createClass({
   }
 });
 
+var CommentItem = React.createClass({
+  render: function() {
+    return(
+      <div className="comment">
+        <h2 className="commentAuthor">
+          {this.props.author}
+        </h2>
+        {this.props.children}
+      </div>
+    );
+  }
+});
 
 var CommentList = React.createClass({
   render: function() {
@@ -23,26 +33,13 @@ var CommentList = React.createClass({
 
     var comments = data.map(function(item) {
       return (
-        <Comment author={item.author}>{item.description}</Comment>
+        <CommentItem author={item.author}>{item.description}</CommentItem>
       );
     });
     
     return (
       <div className="commnetList">
         {comments}
-      </div>
-    );
-  }
-});
-
-var Comment = React.createClass({
-  render: function() {
-    return(
-      <div className="comment">
-        <h2 className="commentAuthor">
-          {this.props.author}
-        </h2>
-        {this.props.children}
       </div>
     );
   }
@@ -58,8 +55,4 @@ var CommentForm = React.createClass({
   }
 });
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  React.render(<CommentBox />, document.body);
-});
-
+window.CommentBox = CommentBox;
