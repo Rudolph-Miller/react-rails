@@ -42,6 +42,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'rubocop'
 end
 
 gem 'react-rails'
