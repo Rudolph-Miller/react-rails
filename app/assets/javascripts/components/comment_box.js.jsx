@@ -5,14 +5,15 @@ require('whatwg-fetch');
 var React = require('react');
 var Immutable = require('immutable');
 
-var CommentBox = React.createClass({
-  getInitialState: function() {
-    return {
+class CommentBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       data: Immutable.List.of()
     }
-  },
+  }
 
-  componentDidMount: function() {
+  componentDidMount() {
     if (this.props && this.props.data) {
       this.setState({
         data: Immutable.List(this.props.data)
@@ -26,9 +27,9 @@ var CommentBox = React.createClass({
         });
       }.bind(this));
     }
-  },
+  }
 
-  render: function() {
+  render() {
     return (
       <div className="commentBox">
         <h1>CommentBox</h1>
@@ -37,10 +38,10 @@ var CommentBox = React.createClass({
       </div>
     );
   }
-});
+}
 
-var CommentItem = React.createClass({
-  render: function() {
+class CommentItem extends React.Component {
+  render() {
     return(
       <div className="comment">
         <h2 className="commentAuthor">
@@ -50,10 +51,10 @@ var CommentItem = React.createClass({
       </div>
     );
   }
-});
+}
 
-var CommentList = React.createClass({
-  render: function() {
+class CommentList extends React.Component {
+  render() {
     var comments = this.props.data.map(function(item) {
       return (
         <CommentItem author={item.author}>{item.description}</CommentItem>
@@ -66,16 +67,16 @@ var CommentList = React.createClass({
       </div>
     );
   }
-});
+}
 
-var CommentForm = React.createClass({
-  render: function() {
+class CommentForm extends React.Component {
+  render() {
     return (
       <div className="commentForm">
         CommentForm
       </div>
     );
   }
-});
+}
 
 window.CommentBox = CommentBox;

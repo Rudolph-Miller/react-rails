@@ -11,7 +11,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.browserify_rails.commandline_options = [
-  "-t coffeeify --extension=\".js.coffee\"",
-  "-t reactify --extension=\".js.jsx.coffee\"",
   "-t reactify --extension=\".js.jsx\""
 ]
