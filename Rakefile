@@ -6,5 +6,5 @@ require File.expand_path('../config/application', __FILE__)
 Rails.application.load_tasks
 
 task :jsxhint do
-  sh 'node_modules/.bin/jsxhint app/assets/javascripts'
+  sh 'node_modules/.bin/jsxhint app/assets/javascripts/**/*.jsx'
 end
