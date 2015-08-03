@@ -10,7 +10,7 @@ class CommentBox extends React.Component {
     super(props);
     this.state = {
       data: Immutable.List.of()
-    }
+    };
   }
 
   componentDidMount() {
