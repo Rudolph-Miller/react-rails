@@ -14,4 +14,4 @@ test:
   override:
     - bundle exec rake jsxhint
     - bundle exec rubocop
-    - bundle exec rake spec
+    - bundle exec rake spec SPEC_OPTS="--format documentation"
