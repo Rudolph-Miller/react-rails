@@ -43,6 +43,7 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'rubocop'
+  gem 'guard-rspec'
 end
 
 gem 'react-rails'
